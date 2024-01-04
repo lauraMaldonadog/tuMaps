@@ -1,25 +1,39 @@
-import { Route, Routes } from "react-router-dom"
+import { Navigate, Route, Routes } from 'react-router-dom';
 import { AuthRoutes } from "../auth/routes/AuthRoutes"
 import { MapaRoutes } from "../mapa/routes/MapaRoutes"
-import {UpdatePage} from "../mapa/page/UpdatePage"
-import { PerfilPage } from "../mapa/page/PerfilPage"
+
+import { useCheckAuth } from '../hooks';
+import { CheckingAuth } from '../ui/';
+
 
 
 
 
 export const AppRouter = () => {
+
+  const status = useCheckAuth();
+
+  if (status === 'checking') {
+    return <CheckingAuth />
+  }
+
   return (
     <Routes>
-        {/* {Login y registro} */}
-       <Route path="/auth/*" element={<AuthRoutes />}/>
-       <Route path="/page/updatePage" element={<UpdatePage/>} /> 
-       <Route path="/page/perfilPage" element={<PerfilPage/>} /> 
 
+      {
+        (status === 'authenticated')
+        
+          ? <Route path="/*" element={<MapaRoutes />} />
+          : <Route path="/auth/*" element={<AuthRoutes />} />
 
-        {/* {Mapa} */}
-        <Route path="/*" element={<MapaRoutes/>}/>
+      }
 
+      <Route path='/*' element={<Navigate to='/auth/login' />} />
+
+     
 
     </Routes>
   )
 }
+
+

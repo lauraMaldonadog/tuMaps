@@ -1,12 +1,15 @@
 import { Box, Divider, Drawer, Grid, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Toolbar, Typography } from '@mui/material';
 import { TurnedInNot } from '@mui/icons-material';
 import { Link } from 'react-router-dom';
+import { useSelector } from 'react-redux';
+
 
 
 
 export const SideBar = ({ drawerWidth = 340 }) => {
   
-   
+    const { displayName } = useSelector( state => state.auth );
+
   
     return (
       <Box
@@ -24,7 +27,7 @@ export const SideBar = ({ drawerWidth = 340 }) => {
           <Toolbar>
             <Link to="/" style={{ textDecoration: 'none', color: 'inherit' }}>
               <Typography variant='h6' noWrap component='div'>
-                TUMAPS
+                {displayName}
               </Typography>
             </Link>
           </Toolbar>
