@@ -1,0 +1,22 @@
+.box-shadow {
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
+}
+.box-shadow{
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0,2);
+}
+.map-container {
+  height: 800px;
+}
+
+.sidebar {
+  background-color: rgb(56, 161, 75);
+  color: #fff;
+  padding: 6px 12px;
+  font-family: monospace;
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 12px;
+  border-radius: 4px;
+}
