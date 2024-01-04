@@ -1,5 +1,5 @@
 import { Box, Divider, Drawer, Grid, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Toolbar, Typography } from '@mui/material';
-import { TurnedInNot } from '@mui/icons-material';
+import { Map, Person, TurnedInNot } from '@mui/icons-material';
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 
@@ -41,11 +41,11 @@ export const SideBar = ({ drawerWidth = 340 }) => {
 
                                     <ListItemButton>
                                         <ListItemIcon>
-                                            <TurnedInNot />
+                                            <Map />
                                         </ListItemIcon>
                                         <Grid container>
                                             <ListItemText primary={text} />
-                                            <ListItemText secondary={'Al darle click aqui podras ver el mapa mundi '} />
+                                            <ListItemText secondary={'Al darle click aquí podrás ver el mapa mundi '} />
 
                                         </Grid>
                                     </ListItemButton>
@@ -62,11 +62,11 @@ export const SideBar = ({ drawerWidth = 340 }) => {
 
                                     <ListItemButton>
                                         <ListItemIcon>
-                                            <TurnedInNot />
+                                            <Map />
                                         </ListItemIcon>
                                         <Grid container>
                                             <ListItemText primary={text} />
-                                            <ListItemText secondary={'Al darle click aqui podras ver los barrios de medellin '} />
+                                            <ListItemText secondary={'Al darle click aquí podrás ver los barrios de Medellín '} />
 
                                         </Grid>
                                     </ListItemButton>
@@ -84,11 +84,11 @@ export const SideBar = ({ drawerWidth = 340 }) => {
 
                                     <ListItemButton>
                                         <ListItemIcon>
-                                            <TurnedInNot />
+                                            <Person />
                                         </ListItemIcon>
                                         <Grid container>
                                             <ListItemText primary={text} />
-                                            <ListItemText secondary={'Al darle click aqui podras editar tu información personal'} />
+                                            <ListItemText secondary={'Al darle click aquí podrás editar tu información personal'} />
 
                                         </Grid>
                                     </ListItemButton>
@@ -106,11 +106,11 @@ export const SideBar = ({ drawerWidth = 340 }) => {
 
                                     <ListItemButton>
                                         <ListItemIcon>
-                                            <TurnedInNot />
+                                            <Person />
                                         </ListItemIcon>
                                         <Grid container>
                                             <ListItemText primary={text} />
-                                            <ListItemText secondary={'Al darle click aqui podras ver el perfil tuyo'} />
+                                            <ListItemText secondary={'Al darle click aquí podrás ver tu perfil'} />
 
                                         </Grid>
                                     </ListItemButton>
@@ -123,4 +123,3 @@ export const SideBar = ({ drawerWidth = 340 }) => {
       </Box>
     );
   };
-  

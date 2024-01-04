@@ -102,14 +102,7 @@ export const PerfilPage = () => {
                   />
                 </Grid>
 
-                <Grid item xs={12}>
-                  <TextField
-                    label="Contraseña"
-                    type="password"
-                    placeholder="Contraseña"
-                    fullWidth
-                  />
-                </Grid>
+              
 
                 <Grid item xs={12}>
                   <TextField
